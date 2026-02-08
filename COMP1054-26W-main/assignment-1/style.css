@@ -77,3 +77,18 @@ footer {
     font-size: 0.8rem;
     color: #f2e6d8;
 }
+section figure {
+    margin-bottom: 1rem;
+}
+
+section figure img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #c46a2b;
+}
+
+/* Make ONLY sections that contain multiple figures go side-by-side */
+section:has(figure + figure) {
+    display: flex;
+    gap: 1rem;
+}
