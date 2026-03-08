@@ -1,0 +1,109 @@
+body {
+    font-family: "Georgia", serif;
+    line-height: 1.4;
+    color: #222;
+    background: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+header p {
+    color: #666;
+    margin-top: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Left-side model image */
+aside:first-of-type {
+    grid-row: 1 / span 3;
+}
+
+aside:first-of-type figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+aside:first-of-type figcaption {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+main > section {
+    border-top: 4px solid #c40000;
+    padding-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+main > section h2 {
+    color: #c40000;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Numbered list styling */
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+ol li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+ol li::before {
+    content: attr(value);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c40000;
+}
+
+/* Subheadings */
+h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+aside:last-of-type {
+    border-top: 4px solid #c40000;
+    padding-top: 1rem;
+}
+
+aside:last-of-type h2 {
+    color: #c40000;
+    font-size: 1.6rem;
+}
+
+aside:last-of-type ol li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #666;
+}
