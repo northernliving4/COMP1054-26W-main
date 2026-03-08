@@ -31,7 +31,6 @@ main {
     margin-top: 2rem;
 }
 
-/* Left-side model image */
 aside:first-of-type {
     grid-row: 1 / span 3;
 }
@@ -59,7 +58,6 @@ main > section h2 {
     margin-bottom: 0.5rem;
 }
 
-/* Numbered list styling */
 ol {
     list-style: none;
     padding-left: 0;
@@ -81,25 +79,49 @@ ol li::before {
     color: #c40000;
 }
 
-/* Subheadings */
 h3 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-aside:last-of-type {
-    border-top: 4px solid #c40000;
-    padding-top: 1rem;
+aside:last-of-type > p {
+    color: #c40000;
+    font-weight: bold;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
 }
 
-aside:last-of-type h2 {
-    color: #c40000;
-    font-size: 1.6rem;
+aside:last-of-type ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 aside:last-of-type ol li {
-    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+aside:last-of-type ol li::before {
+    content: attr(value);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c40000;
+}
+
+aside:last-of-type {
+    border: 2px solid #f5d000;   
+    border-top: 4px solid #c40000; 
+    padding: 1rem;
+    border-radius: 4px; 
 }
 
 footer {
