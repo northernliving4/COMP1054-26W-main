@@ -13,9 +13,7 @@ body {
     padding: 1rem;
 }
 
-/* -----------------------------------------
-   TOP OF PAGE — MAGAZINE HEADER STYLE
------------------------------------------ */
+
 .top-meta {
     font-size: 0.9rem;
     color: #555;
@@ -30,13 +28,13 @@ body {
 .contents-title {
     font-size: 2.8rem;
     font-weight: bold;
-    color: #e67a00; /* magazine orange */
+    color: #e67a00; 
     margin: 0.5rem 0 1.5rem 0;
     font-family: Georgia, serif;
     text-transform: lowercase;
 }
 
-/* ----------------------------------------- */
+
 
 header h1 {
     font-size: 2.5rem;
@@ -71,18 +69,14 @@ aside:first-of-type figcaption {
     margin-top: 0.5rem;
 }
 
-/* REMOVE THIN RED LINE */
+
 main > section {
     border-top: none;
     padding-top: 0;
     margin-bottom: 2rem;
 }
 
-/* -----------------------------------------
-   THIN COLOR BARS + TEXT BELOW (MAGAZINE STYLE)
------------------------------------------ */
 
-/* Reset h2 so text sits OUTSIDE the bar */
 main > section h2 {
     background: none;
     color: #222;
@@ -93,7 +87,7 @@ main > section h2 {
     padding: 0;
 }
 
-/* LIVE WELL — green bar */
+
 main > section:nth-of-type(1)::before {
     content: "";
     display: block;
@@ -103,7 +97,7 @@ main > section:nth-of-type(1)::before {
     margin-bottom: 0.4rem;
 }
 
-/* STYLE — pink bar */
+
 main > section:nth-of-type(2)::before {
     content: "";
     display: block;
@@ -113,7 +107,7 @@ main > section:nth-of-type(2)::before {
     margin-bottom: 0.4rem;
 }
 
-/* HEALTH — teal bar */
+
 main > section:nth-of-type(3)::before {
     content: "";
     display: block;
@@ -123,7 +117,7 @@ main > section:nth-of-type(3)::before {
     margin-bottom: 0.4rem;
 }
 
-/* ----------------------------------------- */
+
 
 ol {
     list-style: none;
@@ -152,9 +146,7 @@ h3 {
     font-weight: bold;
 }
 
-/* ------------------------------
-   ON OUR COVER TEXT
---------------------------------*/
+
 aside:last-of-type > p {
     color: #c40000;
     font-weight: bold;
