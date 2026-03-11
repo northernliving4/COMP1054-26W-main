@@ -187,9 +187,7 @@ aside:last-of-type ol li::before {
     color: #c40000;
 }
 
-/* ------------------------------
-   ON OUR COVER YELLOW OUTLINE
---------------------------------*/
+
 aside:last-of-type {
     border: 2px solid #f5d000;
     border-top: 4px solid #c40000;
@@ -203,9 +201,7 @@ footer {
     color: #666;
 }
 
-/* -----------------------------------------
-   BOTTOM-RIGHT PAGE NUMBER (MAGAZINE STYLE)
------------------------------------------ */
+
 .page-number {
     position: fixed;
     bottom: 10px;
