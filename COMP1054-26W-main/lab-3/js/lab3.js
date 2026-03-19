@@ -1,79 +1,53 @@
-@charset "utf-8";
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-
-html {
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-body {
-    margin: 0;
-    background: #f7f7f7;
-}
-
-#container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
-.tabs {
-    margin-top: 2rem;
-}
 
 
+document.addEventListener('DOMContentLoaded', function () {
 
-.tabs ul[role="tablist"] {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0 0 1rem 0;
-    list-style: none;
-    border-bottom: 2px solid #ccc;
-}
+  var tabs   = document.querySelectorAll('[role="tablist"] [role="tab"]');
+  var panels = document.querySelectorAll('[role="tabpanel"]');
 
-.tabs ul[role="tablist"] li[role="tab"] {
-    margin: 0;
-}
-
-.tabs ul[role="tablist"] li[role="tab"] a {
-    display: block;
-    padding: 0.6rem 1rem;
-    text-decoration: none;
-    color: #444;
-    background: #eaeaea;
-    border-radius: 4px 4px 0 0;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.tabs ul[role="tablist"] li[role="tab"] a:hover {
-    background: #dcdcdc;
-    color: #222;
-}
-
-.tabs ul[role="tablist"] li[role="tab"][aria-selected="true"] a {
-    background: #fff;
-    color: #000;
-    border-bottom: 2px solid #fff;
-    font-weight: 600;
-}
+  /* Deactivate all tabs and hide all panels */
+  function deactivateAll() {
+    tabs.forEach(function (tab) {
+      tab.setAttribute('aria-selected', 'false');
+    });
+    panels.forEach(function (panel) {
+      panel.classList.remove('active');
+    });
+  }
 
 
+  function activateTab(tab, href) {
+    deactivateAll();
 
-.tabs [role="tabpanel"] {
-    background: #fff;
-    padding: 1.5rem;
-    border: 2px solid #ccc;
-    border-radius: 0 4px 4px 4px;
-    display: none;
-}
+    tab.setAttribute('aria-selected', 'true');
 
+    var panelId = href.replace('#', '');
+    var panel   = document.getElementById(panelId);
 
-.tabs [role="tabpanel"][data-visible="true"] {
-    display: block;
-}
+    if (panel) {
+    
+      void panel.offsetWidth;
+      panel.classList.add('active');
+    }
+  }
+
+  
+  tabs.forEach(function (tab) {
+    var anchor = tab.querySelector('a');
+    if (!anchor) return;
+
+    anchor.addEventListener('click', function (event) {
+      event.preventDefault();
+      activateTab(tab, anchor.getAttribute('href'));
+    });
+  });
+
+  
+  if (tabs.length > 0) {
+    var firstAnchor = tabs[0].querySelector('a');
+    if (firstAnchor) {
+      activateTab(tabs[0], firstAnchor.getAttribute('href'));
+    }
+  }
+
+});
