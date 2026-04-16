@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+
+
+:root {
+  /* Colour palette */
+  --ink:        #1a1410;
+  --ink-soft:   #3d3530;
+  --cream:      #f7f3eb;
+  --cream-dark: #ede7d9;
+  --rule:       #c8bfb0;
+  --accent:     #d97706;   /* saffron / amber */
+  --accent-alt: #b45309;
+  --white:      #ffffff;
+
+  /* Typography scale */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Lora', Georgia, serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
+
+  --scale-xs:  0.75rem;
+  --scale-sm:  0.875rem;
+  --scale-md:  1rem;
+  --scale-lg:  1.25rem;
+  --scale-xl:  1.75rem;
+  --scale-2xl: 2.5rem;
+  --scale-3xl: 3.5rem;
+  --scale-4xl: 5rem;
+
+  /* Spacing */
+  --space-xs:  0.375rem;
+  --space-sm:  0.75rem;
+  --space-md:  1.25rem;
+  --space-lg:  2rem;
+  --space-xl:  3.5rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --max-width: 1280px;
+  --col-gap:   2rem;
+
+  /* Borders */
+  --border-thin:   1px solid var(--rule);
+  --border-medium: 2px solid var(--ink);
+  --border-thick:  4px solid var(--accent);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--scale-md);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.45;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent-alt);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
