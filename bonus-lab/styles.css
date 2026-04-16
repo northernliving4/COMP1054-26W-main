@@ -1,0 +1,53 @@
+/* === Page Layout & Basic Styling === */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Flexbox container to line up the images */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Base image styling */
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: clip-path 0.4s ease; /* Smooth animation when shape changes */
+  cursor: pointer;
+}
+
+
+/* Circle shape using clip-path */
+.circle {
+  clip-path: circle(50%); /* 50% radius = perfect circle */
+}
+
+/* Hexagon shape using polygon() */
+.polygon {
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  ); /* Custom 6‑point shape */
+}
+
+/* Inset shape with rounded corners */
+.inset {
+  clip-path: inset(10% 15% 10% 15% round 20px);
+  /* inset(top right bottom left) + rounded corners */
+}
+
+/* Hover effect to show interactivity */
+img:hover {
+  clip-path: circle(40%); /* Shrinks the circle on hover */
+}
